@@ -1,0 +1,5 @@
+rootProject.name = 'spring-social-uber-build'
+
+include 'spring-social-uber'
+include 'spring-social-uber-web'
+include 'spring-social-uber-autoconfigure'

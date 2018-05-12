@@ -30,7 +30,7 @@ public class UberAutoConfigurationTests extends AbstractSocialAutoConfigurationT
     }
 
     @Test
-    public void noFacebookBeanCreatedWhenPropertiesArentSet() {
+    public void noUberBeanCreatedWhenPropertiesArentSet() {
         this.context = new AnnotationConfigWebApplicationContext();
         this.context.register(UberAutoConfiguration.class);
         this.context.register(SocialWebAutoConfiguration.class);

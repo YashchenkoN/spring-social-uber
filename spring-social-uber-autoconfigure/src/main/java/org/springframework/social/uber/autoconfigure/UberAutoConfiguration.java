@@ -66,14 +66,14 @@ public class UberAutoConfiguration {
         @Bean
         @ConditionalOnMissingBean(Uber.class)
         @Scope(value = "request", proxyMode = ScopedProxyMode.INTERFACES)
-        public Uber facebook(final ConnectionRepository repository) {
+        public Uber uber(final ConnectionRepository repository) {
             final Connection<Uber> connection = repository.findPrimaryConnection(Uber.class);
             return connection != null ? connection.getApi() : null;
         }
 
         @Bean(name = { "connect/uberConnect", "connect/uberConnected" })
         @ConditionalOnProperty(prefix = "spring.social", name = "auto-connection-views")
-        public GenericConnectionStatusView facebookConnectView() {
+        public GenericConnectionStatusView uberConnectView() {
             return new GenericConnectionStatusView("uber", "Uber");
         }
 

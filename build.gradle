@@ -201,21 +201,6 @@ project('spring-social-uber') {
     }
 }
 
-project('spring-social-uber-web') {
-    description = 'Uber Web'
-    dependencies {
-        compile("org.springframework:spring-web:$springVersion")
-        compile("org.springframework:spring-webmvc:$springVersion")
-        compile("org.springframework.social:spring-social-core:$springSocialVersion", optional)
-        compile project(':spring-social-uber', optional)
-        compile("com.fasterxml.jackson.core:jackson-core:$jacksonVersion", optional)
-        compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion", optional)
-        compile("com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion", optional)
-        compile("javax.servlet:javax.servlet-api:$servletApiVersion", provided)
-        testCompile("org.springframework:spring-test:$springVersion")
-    }
-}
-
 project("spring-social-uber-autoconfigure") {
     description = "Spring Social Uber Auto-Configuration"
     dependencies {

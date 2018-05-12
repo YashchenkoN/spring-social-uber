@@ -15,11 +15,10 @@
  */
 package org.springframework.social.uber.api.impl;
 
-import com.uber.sdk.rides.client.model.UserProfile;
-
 import org.springframework.social.oauth2.AbstractOAuth2ApiBinding;
 import org.springframework.social.oauth2.OAuth2Version;
 import org.springframework.social.uber.api.Uber;
+import org.springframework.social.uber.api.UserProfile;
 
 /**
  * <p>This is the central class for interacting with Uber.</p>

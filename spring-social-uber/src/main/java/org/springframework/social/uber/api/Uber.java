@@ -15,8 +15,6 @@
  */
 package org.springframework.social.uber.api;
 
-import com.uber.sdk.rides.client.model.UserProfile;
-
 import org.springframework.social.ApiBinding;
 
 /**

@@ -38,7 +38,7 @@ public class UberAdapter implements ApiAdapter<Uber> {
 
     @Override
     public void setConnectionValues(final Uber api, final ConnectionValues values) {
-        final com.uber.sdk.rides.client.model.UserProfile uberProfile = api.userProfile();
+        final org.springframework.social.uber.api.UserProfile uberProfile = api.userProfile();
         values.setProviderUserId(uberProfile.getUuid());
         values.setDisplayName(uberProfile.getFirstName() + " " + uberProfile.getLastName());
         values.setImageUrl(uberProfile.getPicture());
@@ -46,7 +46,7 @@ public class UberAdapter implements ApiAdapter<Uber> {
 
     @Override
     public UserProfile fetchUserProfile(final Uber api) {
-        final com.uber.sdk.rides.client.model.UserProfile uberProfile = api.userProfile();
+        final org.springframework.social.uber.api.UserProfile uberProfile = api.userProfile();
 
         return new UserProfileBuilder()
                 .setId(uberProfile.getUuid())

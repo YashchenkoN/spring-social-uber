@@ -1,0 +1,8 @@
+{
+  "first_name" : "First Name",
+  "last_name" : "Last Name",
+  "email" : "mail123@uber.com",
+  "picture" : "https://uber.com/pic1.png",
+  "promo_code" : "promo150",
+  "uuid" : "123-321"
+}

@@ -69,8 +69,7 @@ apidocs.options.groups = [
         'API Binding'                 : ['org.springframework.social.uber.api*'],
         'Connection Framework Support': ['org.springframework.social.uber.connect'],
         'Configuration Support'       : ['org.springframework.social.uber.config*'],
-        'Spring Security Integration' : ['org.springframework.social.uber.security'],
-        'Web Support'                 : ['org.springframework.social.uber.web']
+        'Spring Security Integration' : ['org.springframework.social.uber.security']
 ]
 
 ext.apiSpec = copySpec {

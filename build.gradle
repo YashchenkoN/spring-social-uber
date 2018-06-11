@@ -196,7 +196,6 @@ project('spring-social-uber') {
         compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
         compile("com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion")
         compile("javax.servlet:javax.servlet-api:$servletApiVersion", provided)
-        compile("com.uber.sdk:uber-rides:$uberApiVersion")
         testCompile("org.springframework:spring-test:$springVersion")
     }
 }

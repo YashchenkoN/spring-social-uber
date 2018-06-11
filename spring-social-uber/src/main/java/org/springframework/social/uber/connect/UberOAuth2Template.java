@@ -15,8 +15,6 @@
  */
 package org.springframework.social.uber.connect;
 
-import com.uber.sdk.core.client.SessionConfiguration;
-
 import org.springframework.social.oauth2.OAuth2Template;
 
 /**
@@ -27,16 +25,15 @@ public class UberOAuth2Template extends OAuth2Template {
     public static final String AUTHORIZATION_PATH = "/oauth/v2/authorize";
     public static final String TOKEN_PATH = "/oauth/v2/token";
 
-    public UberOAuth2Template(final String clientId, final String clientSecret,
-                              final SessionConfiguration.EndpointRegion endpointRegion) {
+    public UberOAuth2Template(final String clientId, final String clientSecret, final String domain) {
 
         super(clientId, clientSecret,
-                getLoginHost(endpointRegion) + AUTHORIZATION_PATH,
-                getLoginHost(endpointRegion) + TOKEN_PATH
+                getLoginHost(domain) + AUTHORIZATION_PATH,
+                getLoginHost(domain) + TOKEN_PATH
         );
     }
 
-    public static String getLoginHost(final SessionConfiguration.EndpointRegion endpointRegion) {
-        return String.format("https://login.%s", endpointRegion.getDomain());
+    public static String getLoginHost(final String domain) {
+        return String.format("https://login.%s", domain);
     }
 }

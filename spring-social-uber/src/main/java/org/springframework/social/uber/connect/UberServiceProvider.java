@@ -15,8 +15,6 @@
  */
 package org.springframework.social.uber.connect;
 
-import com.uber.sdk.core.client.SessionConfiguration;
-
 import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 import org.springframework.social.uber.api.Uber;
 import org.springframework.social.uber.api.impl.UberTemplate;
@@ -26,8 +24,10 @@ import org.springframework.social.uber.api.impl.UberTemplate;
  */
 public class UberServiceProvider extends AbstractOAuth2ServiceProvider<Uber> {
 
+    private static final String DOMAIN = "uber.com";
+
     public UberServiceProvider(final String clientId, final String clientSecret) {
-        super(new UberOAuth2Template(clientId, clientSecret, SessionConfiguration.EndpointRegion.DEFAULT));
+        super(new UberOAuth2Template(clientId, clientSecret, DOMAIN));
     }
 
     @Override
